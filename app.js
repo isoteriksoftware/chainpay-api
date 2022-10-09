@@ -52,7 +52,7 @@ app.get("/api/merchant-address", (req, res) => {
       const pubToAddress = ethUtil.publicToAddress(publicKey).toString("hex");
       console.log("Public key to address: " + pubToAddress);
 
-      address = ethUtil.toChecksumAddress(pubToAddress);
+      address = ethUtil.toChecksumAddress("0x" + pubToAddress);
       console.log("Address with check sum: " + address);
 
       response.address = address;
@@ -62,6 +62,7 @@ app.get("/api/merchant-address", (req, res) => {
       else pathId = 0;
     } catch (e) {
       console.log(e);
+      res.status(500).send("Internal Server Error");
     }
   })();
 });
