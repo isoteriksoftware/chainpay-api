@@ -1,0 +1,13 @@
+{
+  "name": "chainpay-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bip39": "^3.0.4",
+    "ethereumjs-tx": "^2.1.2",
+    "ethereumjs-util": "^7.1.5",
+    "express": "^4.18.2",
+    "hdkey": "^2.0.1"
+  }
+}
